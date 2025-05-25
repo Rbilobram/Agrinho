@@ -1,0 +1,9 @@
+// Dentro da classe Jardineiro
+atualizar() {
+  if (keyIsDown(LEFT_ARROW)) {
+    this.x -= this.velocidade;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    this.x += this.velocidade;
+  }
+}
