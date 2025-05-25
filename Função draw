@@ -1,0 +1,24 @@
+function draw() {
+  // Ajusta a cor de fundo usando map() e lerpColor()
+  let corFundo = lerpColor(
+    color(217, 112, 26),
+    color(219, 239, 208),
+    map(totalArvores, 0, 100, 0, 1)
+  );
+  background(corFundo);
+
+  mostrarInformações();
+
+  // Incrementa a temperatura
+  temperatura += 0.1;
+
+  // Atualiza e mostra o jardineiro
+  jardineiro.atualizar();
+  jardineiro.mostrar();
+
+  // Verifica condições de fim de jogo
+  verificarFimDeJogo();
+
+  // Mostra as árvores plantadas
+  plantas.map((arvore) => arvore.mostrar());
+}
